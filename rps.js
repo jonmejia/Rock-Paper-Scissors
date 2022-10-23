@@ -11,38 +11,47 @@ function getComputerChoice(){
    }
 }
 
-let userSelection = prompt("Select Rock, Paper, or Scissors")
 
-function playRound(playerSelection,computerSelection){
-    if (playerSelection === "Rock" && computerSelection === "Rock"){
+
+function playRound(computerSelection){
+    let playerSelection = prompt("Select Rock, Paper, or Scissors")
+    playerSelection = playerSelection.toLowerCase()
+    if (playerSelection === "rock" && computerSelection === "Rock"){
         return "You both select Rock. It's a draw!"
     }
-    else if (playerSelection == "Rock" && computerSelection == "Paper"){
+    else if (playerSelection == "rock" && computerSelection == "Paper"){
         return "Your opponent chooses paper. You lose!"
     }
-    else if (playerSelection == "Rock"&& computerSelection == "Scissors") {
+    else if (playerSelection == "rock"&& computerSelection == "Scissors") {
         return "Your opponent chooses Scissors. You win!!"
     }
-    else if (playerSelection == "Paper"&& computerSelection == "Rock") {
+    else if (playerSelection == "paper"&& computerSelection == "Rock") {
         return "Your opponent chooses Rock. You win!!"
     }
-    else if (playerSelection == "Paper"&& computerSelection == "Paper") {
+    else if (playerSelection == "paper"&& computerSelection == "Paper") {
         return "Your opponent chooses Paper. It's a draw!"
     }
-    else if (playerSelection == "Paper"&& computerSelection == "Scissors") {
+    else if (playerSelection == "paper"&& computerSelection == "Scissors") {
         return "Your opponent chooses Scissors. You lose!"
     }
-    else if (playerSelection == "Scissors"&& computerSelection == "Rock") {
+    else if (playerSelection == "scissors"&& computerSelection == "Rock") {
         return "Your opponent chooses Rock. You lose!"
     }
-    else if (playerSelection == "Scissors"&& computerSelection == "Paper") {
+    else if (playerSelection == "scissors"&& computerSelection == "Paper") {
         return "Your opponent chooses Paper. You win!!"
     }
-    else if (playerSelection == "Scissors"&& computerSelection == "Scissors") {
+    else if (playerSelection == "scissors"&& computerSelection == "Scissors") {
         return "Your opponent chooses Scissors. It's a draw!"
     }
 }
+function game(){
+    console.log(playRound(computerSelection))
+    console.log(playRound(computerSelection))
+    console.log(playRound(computerSelection))
+    console.log(playRound(computerSelection))
+    console.log(playRound(computerSelection))
+}
 let computerSelection = getComputerChoice()
 console.log(computerSelection)
-console.log(userSelection)
-console.log(playRound(userSelection,computerSelection))
+console.log(game())
+// console.log(playRound(computerSelection))
