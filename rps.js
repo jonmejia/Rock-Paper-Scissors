@@ -13,7 +13,8 @@ function getComputerChoice(){
 
 
 
-function playRound(computerSelection){
+function playRound(){
+    let computerSelection = getComputerChoice()
     let playerSelection = prompt("Select Rock, Paper, or Scissors")
     playerSelection = playerSelection.toLowerCase()
     if (playerSelection === "rock" && computerSelection === "Rock"){
@@ -45,13 +46,9 @@ function playRound(computerSelection){
     }
 }
 function game(){
-    console.log(playRound(computerSelection))
-    console.log(playRound(computerSelection))
-    console.log(playRound(computerSelection))
-    console.log(playRound(computerSelection))
-    console.log(playRound(computerSelection))
-}
-let computerSelection = getComputerChoice()
-console.log(computerSelection)
-console.log(game())
-// console.log(playRound(computerSelection))
+    let playerWins = 0
+    let computerWins = 0
+    //play the game while player wins is less than 3 or cpu wins is less than 3
+    // if player wins or computer wins is 3 then end the game
+    }
+console.log(playRound())
