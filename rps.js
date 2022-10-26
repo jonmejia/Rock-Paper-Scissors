@@ -46,7 +46,7 @@ function game(){
     //play the game while player wins is less than 3 or cpu wins is less than 3
     // if player wins or computer wins is 3 then end the game
 
-    while (playerWins <3 || computerWins <3){
+    while (playerWins <3 && computerWins <3){
         let playerChoice = prompt("Select Rock, Paper, or Scissors")
         playerChoice = playerChoice.toLowerCase()
         let cpuChoice = getComputerChoice()
@@ -70,9 +70,15 @@ function game(){
         else if (playerChoice == "scissors"&& cpuChoice == "Paper") {
             playerWins = playerWins +1
         }
-        
+
         console.log("You:"+playerWins)
         console.log("CPU:"+computerWins)
+        if (computerWins ==3){
+            return "Computer wins!"
+        }
+        else if (playerWins == 3){
+            return "Player wins!"
+        }
     }
 }
 console.log(game())
