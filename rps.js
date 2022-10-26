@@ -11,12 +11,7 @@ function getComputerChoice(){
    }
 }
 
-
-
-function playRound(){
-    let computerSelection = getComputerChoice()
-    let playerSelection = prompt("Select Rock, Paper, or Scissors")
-    playerSelection = playerSelection.toLowerCase()
+function playRound(playerSelection, computerSelection){
     if (playerSelection === "rock" && computerSelection === "Rock"){
         return "You both select Rock. It's a draw!"
     }
@@ -50,5 +45,34 @@ function game(){
     let computerWins = 0
     //play the game while player wins is less than 3 or cpu wins is less than 3
     // if player wins or computer wins is 3 then end the game
+
+    while (playerWins <3 || computerWins <3){
+        let playerChoice = prompt("Select Rock, Paper, or Scissors")
+        playerChoice = playerChoice.toLowerCase()
+        let cpuChoice = getComputerChoice()
+        playRound(playerChoice,cpuChoice)
+
+        if (playerChoice == "rock" && cpuChoice == "Paper"){
+            computerWins = computerWins +1
+        }
+        else if (playerChoice == "rock"&& cpuChoice == "Scissors") {
+            playerWins = playerWins +1
+        }
+        else if (playerChoice == "paper"&& cpuChoice == "Rock") {
+            playerWins = playerWins +1
+        }
+        else if (playerChoice == "paper"&& cpuChoice == "Scissors") {
+            computerWins = computerWins +1
+        }
+        else if (playerChoice == "scissors"&& cpuChoice == "Rock") {
+            computerWins = computerWins +1
+        }
+        else if (playerChoice == "scissors"&& cpuChoice == "Paper") {
+            playerWins = playerWins +1
+        }
+        
+        console.log("You:"+playerWins)
+        console.log("CPU:"+computerWins)
     }
-console.log(playRound())
+}
+console.log(game())
