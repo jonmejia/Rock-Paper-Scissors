@@ -17,3 +17,15 @@ function cpuChoice(){
 }
 
 console.log(cpuChoice())
+
+document.querySelector(".rock-img")?.addEventListener("click", function(){
+    console.log("rock-img working")
+})
+
+document.querySelector(".paper-img")?.addEventListener("click",function(){
+    console.log("paper-img working")
+})
+
+document.querySelector(".scissors-img")?.addEventListener("click",function(){
+    console.log("scissors-img working")
+})
