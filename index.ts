@@ -26,6 +26,8 @@ document.querySelector(".rock-img")?.addEventListener("click", function(){
             alert("loss")
         case "scissors":
             alert("win")
+        default:
+            console.log(computerChoice)
     }
 })
 
@@ -38,8 +40,12 @@ document.querySelector(".paper-img")?.addEventListener("click",function(){
             break;
         case "paper":
             alert("tie")
+            break
         case "scissors":
             alert("lose")
+            break
+        default:
+            console.log(computerChoice)
     }
 })
 
@@ -52,7 +58,11 @@ document.querySelector(".scissors-img")?.addEventListener("click",function(){
             break;
         case "paper":
             alert("win")
+            break
         case "scissors":
             alert("tie")
+            break
+        default:
+            console.log(computerChoice)
     }
 })
