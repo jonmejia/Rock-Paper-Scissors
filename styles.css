@@ -2,8 +2,11 @@ body{
     background-color: #ECF2FF;
 }
 h1{
+    font-size: 8rem;
     color: #3E54AC;
+    text-align: center;
 }
 h2{
     color: #BFACE2;
+    text-align: center;
 }
