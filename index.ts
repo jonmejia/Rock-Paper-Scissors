@@ -20,12 +20,12 @@ document.querySelector(".rock-img")?.addEventListener("click", function(){
     let computerChoice = randomChoice()
     switch(computerChoice){
         case "rock":
-            alert("tie")
+            alert("It's a tie!")
             break;
         case "paper":
-            alert("loss")
+            alert("Victory!!!")
         case "scissors":
-            alert("win")
+            alert("You lose.. :(")
         default:
             console.log(computerChoice)
     }
@@ -36,13 +36,13 @@ document.querySelector(".paper-img")?.addEventListener("click",function(){
     let computerChoice = randomChoice()
     switch(computerChoice){
         case "rock":
-            alert("win")
+            alert("Victory!!!")
             break;
         case "paper":
-            alert("tie")
+            alert("It's a tie!")
             break
         case "scissors":
-            alert("lose")
+            alert("You lose.. :(")
             break
         default:
             console.log(computerChoice)
@@ -54,13 +54,13 @@ document.querySelector(".scissors-img")?.addEventListener("click",function(){
     let computerChoice = randomChoice()
     switch(computerChoice){
         case "rock":
-            alert("lose")
+            alert("You lose.. :(")
             break;
         case "paper":
-            alert("win")
+            alert("Victory!!!")
             break
         case "scissors":
-            alert("tie")
+            alert("It's a tie!")
             break
         default:
             console.log(computerChoice)

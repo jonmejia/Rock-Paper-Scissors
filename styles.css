@@ -1,12 +1,25 @@
 body{
     background-color: #ECF2FF;
+    text-align: center;
 }
 h1{
     font-size: 8rem;
     color: #3E54AC;
-    text-align: center;
 }
 h2{
     color: #BFACE2;
-    text-align: center;
+}
+.counter{
+    font-size: 3rem;
+    color: #3E54AC;
+    display: inline-block;
+}
+#player-victories{
+    color: #BFACE2;
+}
+#cpu-victories{
+    color: #BFACE2;
+}
+.VS{
+    font-size: 5rem;
 }
