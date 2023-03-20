@@ -1,9 +1,6 @@
 let playerWinCount = 0
 let cpuWinCount = 0
 
-// let playerVictories = document.getElementById("player-victories")
-// console.log(playerVictories?.textContent)
-
 function randomChoice(){
     let randomNumber = Math.floor(Math.random()*3+1)
     switch(randomNumber){
@@ -26,15 +23,17 @@ document.querySelector(".rock-img")?.addEventListener("click", function(){
     let computerChoice = randomChoice()
     switch(computerChoice){
         case "rock":
-            alert("It's a tie!")
+            $("#results").text("It's a tie!")
             break;
         case "paper":
-            alert("Victory!!!")
-            playerWinCount++
+            $("#results").text("You lose :(")
+            cpuWinCount++
+            $("#cpu-victories").text(String(cpuWinCount))
             break
         case "scissors":
-            alert("You lose.. :(")
-            cpuWinCount++
+            $("#results").text("Victory!!!")
+            playerWinCount++
+            $("#player-victories").text(String(playerWinCount))
             break
         default:
             console.log(computerChoice)
@@ -45,15 +44,17 @@ document.querySelector(".paper-img")?.addEventListener("click",function(){
     let computerChoice = randomChoice()
     switch(computerChoice){
         case "rock":
-            alert("Victory!!!")
+            $("#results").text("Victory!!!")
             playerWinCount++
+            $("#player-victories").text(String(playerWinCount))
             break;
         case "paper":
-            alert("It's a tie!")
+            $("#results").text("It's a tie!")
             break
         case "scissors":
-            alert("You lose.. :(")
+            $("#results").text("You lose :(")
             cpuWinCount++
+            $("#cpu-victories").text(String(cpuWinCount))
             break
         default:
             console.log(computerChoice)
@@ -64,17 +65,20 @@ document.querySelector(".scissors-img")?.addEventListener("click",function(){
     let computerChoice = randomChoice()
     switch(computerChoice){
         case "rock":
-            alert("You lose.. :(")
+            $("#results").text("You lose :(")
             cpuWinCount++
+            $("#cpu-victories").text(String(cpuWinCount))
             break;
         case "paper":
-            alert("Victory!!!")
+            $("#results").text("Victory!!!")
             playerWinCount++
+            $("#player-victories").text(String(playerWinCount))
             break
         case "scissors":
-            alert("It's a tie!")
+            $("#results").text("It's a tie!")
             break
         default:
             console.log(computerChoice)
     }
 })
+
