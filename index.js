@@ -21,15 +21,15 @@ function randomChoice() {
     var computerChoice = randomChoice();
     switch (computerChoice) {
         case "rock":
-            $("#results").text("It's a tie!");
+            $("#results").text("CPU chose rock, it's a tie!");
             break;
         case "paper":
-            $("#results").text("You lose :(");
+            $("#results").text("CPU chose paper, you lose :(");
             cpuWinCount++;
             $("#cpu-victories").text(String(cpuWinCount));
             break;
         case "scissors":
-            $("#results").text("Victory!!!");
+            $("#results").text("Victory!!! CPU chose scissors!!");
             playerWinCount++;
             $("#player-victories").text(String(playerWinCount));
             break;
@@ -41,15 +41,15 @@ function randomChoice() {
     var computerChoice = randomChoice();
     switch (computerChoice) {
         case "rock":
-            $("#results").text("Victory!!!");
+            $("#results").text("Victory!!! CPU chose rock!!");
             playerWinCount++;
             $("#player-victories").text(String(playerWinCount));
             break;
         case "paper":
-            $("#results").text("It's a tie!");
+            $("#results").text("CPU chose paper, it's a tie!");
             break;
         case "scissors":
-            $("#results").text("You lose :(");
+            $("#results").text("CPU chose scissors, you lose :(");
             cpuWinCount++;
             $("#cpu-victories").text(String(cpuWinCount));
             break;
@@ -61,17 +61,17 @@ function randomChoice() {
     var computerChoice = randomChoice();
     switch (computerChoice) {
         case "rock":
-            $("#results").text("You lose :(");
+            $("#results").text("CPU chose rock, you lose :(");
             cpuWinCount++;
             $("#cpu-victories").text(String(cpuWinCount));
             break;
         case "paper":
-            $("#results").text("Victory!!!");
+            $("#results").text("Victory!!! CPU chose paper!!");
             playerWinCount++;
             $("#player-victories").text(String(playerWinCount));
             break;
         case "scissors":
-            $("#results").text("It's a tie!");
+            $("#results").text("CPU chose scissors, it's a tie!");
             break;
         default:
             console.log(computerChoice);
